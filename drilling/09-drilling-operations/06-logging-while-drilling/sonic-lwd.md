@@ -1,13 +1,13 @@
 ---
 schema_version: "1.0"
-id: "drilling-gas-cut-mud"
-title: "Gas Cut Mud"
+id: "drilling-sonic-lwd"
+title: "Sonic (LWD, Logging While Drilling)"
 title_no: null
-slug: "gas-cut-mud"
+slug: "sonic-lwd"
 type: null
 status: draft
 domain: "drilling"
-folder: "07-well-control/03-kick-causes"
+folder: "09-drilling-operations/06-logging-while-drilling"
 parents: []
 siblings: []
 topics: []

@@ -1,13 +1,13 @@
 ---
 schema_version: "1.0"
-id: "drilling-sonic"
-title: "Sonic"
+id: "drilling-cement-defoamers"
+title: "Cement Defoamers"
 title_no: null
-slug: "sonic"
+slug: "cement-defoamers"
 type: null
 status: draft
 domain: "drilling"
-folder: "13-formation-evaluation/02-wireline-logs"
+folder: "10-cementing/03-additives"
 parents: []
 siblings: []
 topics: []

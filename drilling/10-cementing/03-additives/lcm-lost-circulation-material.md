@@ -1,13 +1,13 @@
 ---
 schema_version: "1.0"
-id: "crane-and-logistics-for-2017-12-21-2381-kran-og-loft"
-title: "For 2017 12 21 2381 Kran Og Loft"
+id: "drilling-lcm-lost-circulation-material"
+title: "LCM (Lost Circulation Material)"
 title_no: null
-slug: "for-2017-12-21-2381-kran-og-loft"
+slug: "lcm-lost-circulation-material"
 type: null
 status: draft
-domain: "crane-and-logistics"
-folder: "07-certification-path-for-ncs-crane-operator/01-regulatory-anchors"
+domain: "drilling"
+folder: "10-cementing/03-additives"
 parents: []
 siblings: []
 topics: []

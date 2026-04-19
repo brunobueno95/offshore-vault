@@ -1,9 +1,9 @@
 ---
 schema_version: "1.0"
-id: "drilling-gamma-ray"
-title: "Gamma Ray"
+id: "drilling-sonic-wireline"
+title: "Sonic (Wireline)"
 title_no: null
-slug: "gamma-ray"
+slug: "sonic-wireline"
 type: null
 status: draft
 domain: "drilling"

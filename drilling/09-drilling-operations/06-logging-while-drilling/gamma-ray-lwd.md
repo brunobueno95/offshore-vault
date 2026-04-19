@@ -1,41 +1,32 @@
 ---
 schema_version: "1.0"
-
-id: "subsea-dnv-st-n001-marine-operations"
-title: "Dnv St N001 Marine Operations"
+id: "drilling-gamma-ray-lwd"
+title: "Gamma Ray (LWD, Logging While Drilling)"
 title_no: null
-slug: "dnv-st-n001-marine-operations"
+slug: "gamma-ray-lwd"
 type: null
 status: draft
-
-domain: "subsea"
-folder: "11-installation-methods-and-vessels/subsea-lifts"
+domain: "drilling"
+folder: "09-drilling-operations/06-logging-while-drilling"
 parents: []
 siblings: []
-
 topics: []
 life_cycle_phases: []
 depth: null
 perspective: []
-
 authoritative_sources: []
 reference_textbooks: []
 related_incidents: []
-
 related: []
 cross_domain: []
-
 relevant_to_roles: []
-
 ncs_specific: true
 norwegian_terms: []
-
 authors: []
 created: "2026-04-19"
 updated: "2026-04-19"
 review_due: null
 tags: []
-
 citation_density: null
 word_count: null
 ---

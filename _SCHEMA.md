@@ -197,9 +197,11 @@ Each entry is `{no: "norsk term", en: "english equivalent"}`. Example:
 
 ```yaml
 norwegian_terms:
-  - { no: "kranfører", en: "crane operator" }
-  - { no: "løfteleder", en: "lift supervisor" }
+  - { "no": "kranfører", en: "crane operator" }
+  - { "no": "løfteleder", en: "lift supervisor" }
 ```
+
+**YAML 1.1 gotcha.** The key `"no"` MUST be quoted. Unquoted `no:` is interpreted by YAML 1.1 (which PyYAML uses) as the boolean `False`, and the validator will not see the Norwegian term. Always quote the key: `{ "no": "..." , en: "..." }`. The validator accepts both quoted and fallback forms, but agents should produce the quoted form.
 
 ### `authors` (list of strings)
 
