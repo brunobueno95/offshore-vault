@@ -74,6 +74,42 @@ Not a free-form section. The `authoritative_sources` frontmatter is the canonica
 
 ---
 
+## Pedagogical accessibility with technical depth
+
+This is the foundation rule. Every article is written for a reader who needs to become technically competent but is a beginner in the field. The article must be deeply technical AND easy to understand. Both together. Dense jargon that assumes prior domain knowledge fails the rule. Shallow summary that avoids the technical substance also fails the rule. Never assume prior knowledge. Always be pedagogical.
+
+The foundation of this rule is repetition. Human memory decays. A reader who sees a term defined once, on page one, will not remember the definition on page three. The article keeps the definitions in front of the reader at all times, so the reader learns through repeated exposure rather than through effort. This is binding, not a style preference. Agents may sacrifice prose elegance, brevity, and flow to honour it. They must not sacrifice depth.
+
+### Concrete rules
+
+1. **Every acronym is expanded at every single use**, not only at first use. Example: write `BOP (Blowout Preventer)` every time the acronym appears, in every paragraph, in every section. If an article uses BOP thirty times, the expansion appears thirty times. No exceptions. If the acronym appears in three consecutive sentences, it is expanded three times.
+
+2. **Every specialist term is redefined in plain language at every single use.** A single-clause gloss in parentheses is sufficient. Example: `the driller (the worker who operates the drilling controls)` every time the term appears. If the term appears in fifteen places, the gloss appears in fifteen places. Specialist terms are domain-specific words that a reader with no prior exposure to the field would not recognise on their own.
+
+3. **Every Norwegian term is translated at every single use.** Example: `the kranfører (crane operator)` every time, not only first appearance. The `norwegian_terms` frontmatter field lists the pairs for the validator. The body carries the translation inline at every use.
+
+4. **Mechanisms are explained, not just named.** "A BOP closes on the pipe" is weak. The right explanation describes how the rams move, how the rubber seats, what is sealed off, and why it matters.
+
+5. **Why a thing exists and what problem it solves comes before how it is used.**
+
+6. **Examples are NCS-concrete when possible.** Specific fields (Troll, Johan Sverdrup, Ekofisk), specific operators (Equinor, Aker BP, Vår Energi), specific equipment models and standards.
+
+7. **Analogies are allowed when they genuinely help the reader learn.** Never forced.
+
+8. **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
+
+### Cost of this rule
+
+Prose runs longer under these rules. That cost is accepted. Depth floors (800 words foundational, 1500 operational, 3000 advanced) absorb the overhead. Articles routinely exceed the floor. That is expected.
+
+### Enforcement
+
+Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the mechanical portion on every occurrence. Specialist-term repetition is enforced by the review agent, which flags articles using specialist terms bare.
+
+The review agent additionally flags articles that are dense-and-incomprehensible or simple-but-shallow. Human review promotes to `review` or `published` only after both bars (depth AND accessibility) are met.
+
+---
+
 ## Writing style
 
 ### Voice
@@ -86,8 +122,9 @@ Not a free-form section. The `authoritative_sources` frontmatter is the canonica
 
 ### Terminology
 
-- **Acronym expansion on EVERY use.** Always. `BOP (Blowout Preventer)`, `ROP (Rate of Penetration)`, `NCS (Norwegian Continental Shelf)`.  This rule applies every article; and its very important to always expand the Accornym so the user memorize those names through repetition.
-- **Norwegian term pairing.** When a Norwegian working term exists and matters, give both: `løfteleder (lift supervisor)`.
+- **Acronym expansion at every single use.** See the Pedagogical accessibility section for the full rule. Every acronym, every occurrence, every article. Examples: `BOP (Blowout Preventer)`, `ROP (Rate of Penetration)`, `NCS (Norwegian Continental Shelf)`. If the acronym appears thirty times in the article, the expansion appears thirty times. No exception for recent repetition in the same paragraph.
+- **Norwegian term pairing at every single use.** See the Pedagogical accessibility section. Every Norwegian working term is paired with the English gloss at every occurrence, not only first use. Example: `the løfteleder (lift supervisor)`.
+- **Specialist term gloss at every single use.** See the Pedagogical accessibility section. A brief plain-language gloss in parentheses at every occurrence of a specialist domain term. Example: `the driller (the worker who operates the drilling controls)`.
 - **Units.** SI where the NCS convention is SI. Imperial where the NCS convention is imperial (oilfield tradition retains some imperial units: wellbore diameters in inches, pump pressure sometimes in psi). Always state the unit. Never mix without noting conversion.
 
 ### Formatting rules
@@ -196,7 +233,10 @@ The following are categorical rule violations and cause validator rejection rega
 8. **Do not fabricate sources.** Cite real sources or flag the article as incomplete.
 9. **Do not reproduce copyrighted standards text.** Summarize and cite.
 10. **Do not skip the NCS-specific context section** when `ncs_specific: true`. If there is genuinely no NCS angle, the article probably does not belong in this vault.
-11 - **Never give a technical accronym withou expanding the full name, always expand the accronym in every instance
+11. **Never use an acronym bare.** Expand it every single time, not only first use. This is the mechanical implementation of the Pedagogical accessibility rule. Validator rule W-CON-03 flags every bare occurrence.
+12. **Never use a Norwegian term without inline English translation at every use.** Not only first use. Validator rule W-CON-06 flags every bare occurrence.
+13. **Never use a specialist domain term without a plain-language gloss at every use.** Not only first use. Assume the reader does not remember the earlier definition. The review agent flags bare specialist terms.
+14. **Never shortcut the pedagogy rule for the sake of prose elegance.** The rule is binding. Clunky prose is accepted. Longer article length is accepted.
 
 ---
 

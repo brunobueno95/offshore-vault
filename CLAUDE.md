@@ -8,6 +8,12 @@ A structured knowledge database for AI agents to read, write, validate, and main
 
 The skeleton is the product first. Content comes from agents later. Schema and rules are locked before content is written.
 
+## Content pedagogy (vault-wide rule)
+
+Every article in every tree is written under the pedagogy rule defined in `_AGENT_RULES.md` section "Pedagogical accessibility with technical depth". Summary: deep technical content AND newcomer-readable prose, both together, enforced by per-every-use expansion of acronyms, specialist terms, and Norwegian terms. Validator rules W-CON-03 and W-CON-06 cover the mechanical portion on every occurrence. Review agents cover the semantic portion.
+
+The rule is binding and applies to all four trees. Agents may sacrifice prose elegance, brevity, and flow to honour it. They may not sacrifice depth.
+
 ## Scope domains
 
 Four trees, each self-contained, each owning a distinct knowledge domain:
@@ -73,6 +79,7 @@ Never instruct a tree agent to read another tree at write time. If it needs cont
 - Do not paraphrase authoritative sources. Cite them in `authoritative_sources` and write your own analysis.
 - Do not write articles shorter than the `depth` minimum defined in `_AGENT_RULES.md`.
 - Do not mark an article `status: published` unless it passes all validator checks.
+- Do not use an acronym, a Norwegian term, or a specialist domain term bare. Inline expansion at every occurrence. Never only at first use. See `_AGENT_RULES.md` pedagogy section.
 
 ## Schema version
 

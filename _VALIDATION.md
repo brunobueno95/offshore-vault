@@ -100,17 +100,18 @@ These are content-quality signals. The vault's purpose is NCS-specific, so artic
 
 32. **W-CON-01:** Article body does not contain `## Overview`, `## Details`, or `## Sources` sections.
 33. **W-CON-02:** Article contains em dashes. (See `_AGENT_RULES.md`: forbidden.)
-34. **W-CON-03:** Article uses an acronym without expansion on first use.
+34. **W-CON-03:** Article uses an acronym without expansion at an occurrence. Applies to every occurrence, not only first use. Each bare-acronym occurrence is reported as a separate warning. Pairs with the "Pedagogical accessibility with technical depth" rule in `_AGENT_RULES.md`.
 35. **W-CON-04:** Article paragraph exceeds 200 words (readability warning).
 36. **W-CON-05:** Article body contains raw URLs outside the `## Sources` section.
+37. **W-CON-06:** Article body uses a Norwegian term listed in its `norwegian_terms` frontmatter without inline English translation at the use site. Applies to every occurrence, not only first use. Each bare-Norwegian-term occurrence is reported as a separate warning. Pairs with the "Pedagogical accessibility with technical depth" rule in `_AGENT_RULES.md`.
 
 ---
 
 ## Freshness (warnings and info)
 
-37. **W-FRESH-01:** An authoritative source has `verified_date` older than 365 days. Flag for re-verification.
-38. **I-FRESH-01:** Article `updated` date is older than `review_due`. Due for review.
-39. **I-FRESH-02:** No updates to the tree in 180 days. Tree freshness flag.
+38. **W-FRESH-01:** An authoritative source has `verified_date` older than 365 days. Flag for re-verification.
+39. **I-FRESH-01:** Article `updated` date is older than `review_due`. Due for review.
+40. **I-FRESH-02:** No updates to the tree in 180 days. Tree freshness flag.
 
 ---
 

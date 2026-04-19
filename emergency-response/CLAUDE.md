@@ -258,10 +258,29 @@ Leaf length target: 800 to 2500 words for `operational` depth. `foundational` le
 
 ## 7. Writing rules
 
+### Pedagogical accessibility with technical depth (foundation rule, binding)
+
+Every article is written for a reader who needs to become technically competent but is a beginner in the field. The article must be deeply technical AND easy to understand. Both together. Dense jargon that assumes prior domain knowledge fails the rule. Shallow summary that avoids the technical substance also fails the rule. Never assume prior knowledge. Always be pedagogical.
+
+The foundation is repetition. Human memory decays. A reader who sees a term defined once, on page one, will not remember the definition on page three. The article keeps the definitions in front of the reader at all times, so the reader learns through repeated exposure rather than through effort. This is binding, not a style preference.
+
+Concrete:
+
+- **Every acronym is expanded at every single use**, not only at first use. If `GSK` appears thirty times, `GSK (Grunnleggende Sikkerhets- og Beredskapskurs)` appears thirty times. No exception for recent repetition in the same paragraph.
+- **Every specialist term is redefined in plain language at every single use.** A single-clause gloss in parentheses. Example: `the OIM (Offshore Installation Manager, the senior offshore leader responsible for the installation)` every time the term appears.
+- **Every Norwegian term is translated at every single use.** Example: `the beredskapsleder (emergency team leader)` every time, not only first appearance.
+- **Mechanisms are explained, not just named.** Describe how the thing works, not just what it is called.
+- **Why a thing exists and what problem it solves comes before how it is used.**
+- **Examples are NCS-concrete** when possible: specific installations, specific operators, specific equipment models and standards.
+- **Analogies are allowed when they genuinely help the reader learn.** Never forced.
+- **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
+
+Prose runs longer under this rule. That cost is accepted. Depth floors absorb the overhead. Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the mechanical portion on every occurrence. The review agent catches specialist-term violations and articles that are dense-and-incomprehensible or simple-but-shallow.
+
 ### Mandatory
 
-1. Acronym expansion on EEVERY SINGLE USE, in every article, every time. Examples: `GSK (Grunnleggende Sikkerhets- og Beredskapskurs)`, `HUET (Helicopter Underwater Escape Training)`, `SAR (Search and Rescue)`, `ERRV (Emergency Response and Rescue Vessel)`, `FRC (Fast Rescue Craft)`, `HLO (Helicopter Landing Officer)`, `HDA (Helideck Assistant)`, `OIM (Offshore Installation Manager)`, `ESD (Emergency Shutdown)`, `PSD (Process Shutdown)`, `APS (Abandon Platform Shutdown)`, `TR (Temporary Refuge)`, `FFL (Free-Fall Lifeboat)`, `MES (Marine Evacuation System)`, `SCBA (Self-Contained Breathing Apparatus)`, `EEBD (Emergency Escape Breathing Device)`, `EBS (Emergency Breathing System)`, `PPE (Personal Protective Equipment)`, `RNNP (Risikonivå i norsk petroleumsvirksomhet)`.
-2. Norwegian term pairing. `beredskap (emergency preparedness)`, `innsatslag (response team)`, `beredskapsleder (emergency team leader)`, `plattformsjef (platform manager, OIM)`, `brannlag (fire team)`, `redningslag (rescue team)`, `forstehjelpslag (first aid team)`, `baretelag (stretcher team)`, `mob-lag (MOB team)`, `monstring (mustering)`, `evakueringsmiddel (evacuation means)`, `omradeberedskap (area preparedness)`, `rommingsveier (escape routes)`, `varslingsplikt (notification duty)`, `storulykke (major accident)`.
+1. Acronym expansion at every single use in every article. See the Pedagogical accessibility section above. Every acronym, every occurrence. Examples: `GSK (Grunnleggende Sikkerhets- og Beredskapskurs)`, `HUET (Helicopter Underwater Escape Training)`, `SAR (Search and Rescue)`, `ERRV (Emergency Response and Rescue Vessel)`, `FRC (Fast Rescue Craft)`, `HLO (Helicopter Landing Officer)`, `HDA (Helideck Assistant)`, `OIM (Offshore Installation Manager)`, `ESD (Emergency Shutdown)`, `PSD (Process Shutdown)`, `APS (Abandon Platform Shutdown)`, `TR (Temporary Refuge)`, `FFL (Free-Fall Lifeboat)`, `MES (Marine Evacuation System)`, `SCBA (Self-Contained Breathing Apparatus)`, `EEBD (Emergency Escape Breathing Device)`, `EBS (Emergency Breathing System)`, `PPE (Personal Protective Equipment)`, `RNNP (Risikonivå i norsk petroleumsvirksomhet)`.
+2. Norwegian term pairing at every single use. See the Pedagogical accessibility section above. Every use, not only first. Examples: `the beredskap (emergency preparedness)`, `the innsatslag (response team)`, `the beredskapsleder (emergency team leader)`, `the plattformsjef (platform manager, OIM)`, `the brannlag (fire team)`, `the redningslag (rescue team)`, `the forstehjelpslag (first aid team)`, `the baretelag (stretcher team)`, `the mob-lag (MOB team)`, `the monstring (mustering)`, `the omradeberedskap (area preparedness)`, `the rommingsveier (escape routes)`, `the varslingsplikt (notification duty)`, `the storulykke (major accident)`.
 3. No em dashes. Ever. Use commas, periods, or restructure.
 4. Cite every substantive claim from the whitelist. Inline numeric references matched to the Sources list.
 5. Safety-critical content takes priority over stylistic concerns. Err toward clarity and unambiguity.
@@ -320,7 +339,7 @@ Validator runs on every commit to the tree. It checks:
 - `authoritative_sources` entries match the whitelist in section 5.
 - `cross_domain` entries point to allowed sibling domains.
 - No em dashes in body text.
-- Acronym expansion present on first use for the canonical acronym list.
+- Acronym expansion present at every occurrence for the canonical acronym list (per W-CON-03). Norwegian term inline translation at every occurrence (per W-CON-06).
 - `ncs_specific: true` unless the leaf is explicitly a cross-reference-only stub.
 - `status: published` requires non-empty `authoritative_sources`, non-empty body, `word_count` populated.
 

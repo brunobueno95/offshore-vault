@@ -305,10 +305,29 @@ Optional sections: `## Related concepts`, `## Historical incidents`, `## Equipme
 
 ## 7. Writing rules
 
+### Pedagogical accessibility with technical depth (foundation rule, binding)
+
+Every article is written for a reader who needs to become technically competent but is a beginner in the field. The article must be deeply technical AND easy to understand. Both together. Dense jargon that assumes prior domain knowledge fails the rule. Shallow summary that avoids the technical substance also fails the rule. Never assume prior knowledge. Always be pedagogical.
+
+The foundation is repetition. Human memory decays. A reader who sees a term defined once, on page one, will not remember the definition on page three. The article keeps the definitions in front of the reader at all times, so the reader learns through repeated exposure rather than through effort. This is binding, not a style preference.
+
+Concrete:
+
+- **Every acronym is expanded at every single use**, not only at first use. If `WLL` appears thirty times, `WLL (Working Load Limit)` appears thirty times. No exception for recent repetition in the same paragraph.
+- **Every specialist term is redefined in plain language at every single use.** A single-clause gloss in parentheses. Example: `the anhuker (the rigger who attaches and detaches loads from the hook)` every time the term appears.
+- **Every Norwegian term is translated at every single use.** Example: `the kranfører (crane operator)` every time, not only first appearance.
+- **Mechanisms are explained, not just named.** Describe how the thing works, not just what it is called.
+- **Why a thing exists and what problem it solves comes before how it is used.**
+- **Examples are NCS-concrete** when possible: specific installations, specific operators, specific equipment models and standards.
+- **Analogies are allowed when they genuinely help the reader learn.** Never forced.
+- **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
+
+Prose runs longer under this rule. That cost is accepted. Depth floors absorb the overhead. Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the mechanical portion on every occurrence. The review agent catches specialist-term violations and articles that are dense-and-incomprehensible or simple-but-shallow.
+
 ### Mandatory
 
-1. - **Acronym expansion on EVERY use.** Always. `BOP (Blowout Preventer)`, `ROP (Rate of Penetration)`, `NCS (Norwegian Continental Shelf)`.  This rule applies every article; and its very important to always expand the Accornym so the user memorize those names through repetition.
-2. **Norwegian term pairing on first use.** `kranfører (crane operator)`, `løfteleder (lift supervisor)`, `anhuker (rigger)`, `signalgiver (banksman)`, `sakkyndig kontroll (competent inspection)`, `kranbok (crane logbook)`, `rødsone (red zone under crane)`.
+1. **Acronym expansion at every single use.** See the Pedagogical accessibility section above. Every acronym, every occurrence, every article. Examples: `WLL (Working Load Limit)`, `SWL (Safe Working Load)`, `NCS (Norwegian Continental Shelf)`, `DROPS (Dropped Object Prevention Offshore)`.
+2. **Norwegian term pairing at every single use.** See the Pedagogical accessibility section above. Every use, not only first. Examples: `the kranfører (crane operator)`, `the løfteleder (lift supervisor)`, `the anhuker (rigger)`, `the signalgiver (banksman)`, `sakkyndig kontroll (competent inspection)`, `the kranbok (crane logbook)`, `the rødsone (red zone under crane)`.
 3. **Rigging angle convention: dual reference mandatory.** Any article discussing sling angles MUST state both the Crosby/international horizontal reference AND the Norwegian arbeidsvinkel (working angle from vertical, summing to 90). Include the mini conversion table in every rigging section:
 
 | Horizontal | Arbeidsvinkel | WLL |
@@ -328,7 +347,7 @@ This is a safety-critical repetition rule. Every rigging section. Every time.
 
 7. **Meet `depth` word count and citation density before `status: review`.**
 
-8. **Always expend technical accronyms in every single use.
+8. **Always expand technical acronyms at every single use**, per the Pedagogical accessibility section and validator rule W-CON-03.
 
 ### Forbidden
 

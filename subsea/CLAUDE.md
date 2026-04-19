@@ -229,10 +229,29 @@ Every leaf follows this body layout below the frontmatter. Sections may be empty
 
 ## 7. Writing rules
 
+### Pedagogical accessibility with technical depth (foundation rule, binding)
+
+Every article is written for a reader who needs to become technically competent but is a beginner in the field. The article must be deeply technical AND easy to understand. Both together. Dense jargon that assumes prior domain knowledge fails the rule. Shallow summary that avoids the technical substance also fails the rule. Never assume prior knowledge. Always be pedagogical.
+
+The foundation is repetition. Human memory decays. A reader who sees a term defined once, on page one, will not remember the definition on page three. The article keeps the definitions in front of the reader at all times, so the reader learns through repeated exposure rather than through effort. This is binding, not a style preference.
+
+Concrete:
+
+- **Every acronym is expanded at every single use**, not only at first use. If `ROV` appears thirty times, `ROV (Remotely Operated Vehicle)` appears thirty times. No exception for recent repetition in the same paragraph.
+- **Every specialist term is redefined in plain language at every single use.** A single-clause gloss in parentheses. Example: `the christmas tree (the valve assembly sitting on top of a subsea well that controls flow)` every time the term appears.
+- **Every Norwegian term is translated at every single use.** Example: `the undervannsfartøy (ROV, Remotely Operated Vehicle)` every time, not only first appearance.
+- **Mechanisms are explained, not just named.** Describe how the thing works, not just what it is called.
+- **Why a thing exists and what problem it solves comes before how it is used.**
+- **Examples are NCS-concrete** when possible: specific fields, specific operators, specific equipment models and standards.
+- **Analogies are allowed when they genuinely help the reader learn.** Never forced.
+- **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
+
+Prose runs longer under this rule. That cost is accepted. Depth floors absorb the overhead. Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the mechanical portion on every occurrence. The review agent catches specialist-term violations and articles that are dense-and-incomprehensible or simple-but-shallow.
+
 **Mandatory**
 
-1. Acronym expansion on EVERY USE on every article. Examples: `SPS (Subsea Production System)`, `SURF (Subsea Umbilicals Risers Flowlines)`, `HXT (Horizontal Xmas Tree)`, `SCM (Subsea Control Module)`, `SSIV (Subsea Isolation Valve)`, `HIPPS (High Integrity Pressure Protection System)`, `ILT / ILS / ILY (In-Line Tee / Sled / Wye)`, `MEG (Mono-Ethylene Glycol)`, `PLEM / PLET (Pipeline End Manifold / Termination)`, `ROV (Remotely Operated Vehicle)`, `AHC (Active Heave Compensation)`, `TMS (Tether Management System)`, `LARS (Launch and Recovery System)`, `USBL / LBL (Ultra-Short / Long Baseline acoustic positioning)`, `DVL (Doppler Velocity Log)`, `INS (Inertial Navigation System)`, `RLWI (Riserless Light Well Intervention)`, `EDP / LRP (Emergency Disconnect / Lower Riser Package)`, `IRM (Inspection Repair Maintenance)`.
-2. Norwegian term pairing. Use these canonical pairs and extend the list in `_CONTROLLED_VOCABULARY.md` if needed: `undervannsproduksjon (subsea production)`, `juletre (christmas tree)`, `bronnramme (template)`, `havbunnskompresjon (subsea compression)`, `havbunnsseparasjon (subsea separation)`, `stigerorsystem (riser system)`, `kontrollkabel (umbilical)`, `rorledning (pipeline)`, `undervannsfartoy (ROV)`, `metningsdykking (saturation diving)`.
+1. Acronym expansion at every single use in every article. See the Pedagogical accessibility section above. Every acronym, every occurrence. Examples: `SPS (Subsea Production System)`, `SURF (Subsea Umbilicals Risers Flowlines)`, `HXT (Horizontal Xmas Tree)`, `SCM (Subsea Control Module)`, `SSIV (Subsea Isolation Valve)`, `HIPPS (High Integrity Pressure Protection System)`, `ILT / ILS / ILY (In-Line Tee / Sled / Wye)`, `MEG (Mono-Ethylene Glycol)`, `PLEM / PLET (Pipeline End Manifold / Termination)`, `ROV (Remotely Operated Vehicle)`, `AHC (Active Heave Compensation)`, `TMS (Tether Management System)`, `LARS (Launch and Recovery System)`, `USBL / LBL (Ultra-Short / Long Baseline acoustic positioning)`, `DVL (Doppler Velocity Log)`, `INS (Inertial Navigation System)`, `RLWI (Riserless Light Well Intervention)`, `EDP / LRP (Emergency Disconnect / Lower Riser Package)`, `IRM (Inspection Repair Maintenance)`.
+2. Norwegian term pairing at every single use. See the Pedagogical accessibility section above. Every use, not only first. Canonical pairs: `undervannsproduksjon (subsea production)`, `juletre (christmas tree)`, `bronnramme (template)`, `havbunnskompresjon (subsea compression)`, `havbunnsseparasjon (subsea separation)`, `stigerorsystem (riser system)`, `kontrollkabel (umbilical)`, `rorledning (pipeline)`, `undervannsfartoy (ROV)`, `metningsdykking (saturation diving)`. Extend the list in `_CONTROLLED_VOCABULARY.md` if needed.
 3. No em dashes. Use commas, periods, or restructure the sentence.
 4. Cite every substantive claim from the section 5 whitelist.
 5. Subsea content is authored one notch gentler than the equivalent tier in other trees. Subsea is a dense specialist domain and the intended reader population includes dive instructors transitioning to ROV work. Readability matters. Favour short paragraphs and explicit definitions over dense jargon walls.
@@ -303,8 +322,8 @@ The vault root `_VALIDATION.md` is authoritative. Summary of what the validator 
 - `related` paths resolve within subsea.
 - `cross_domain` paths start with a sibling tree name (`drilling/`, `crane-and-logistics/`, `emergency-response/`).
 - No em dashes anywhere in body text.
-- First-use acronyms expanded in body text (heuristic; flagged, not blocked).
-- Norwegian terms in body text appear in `norwegian_terms` list.
+- Acronyms expanded at every occurrence in body text (per W-CON-03). Bare-acronym occurrences flagged.
+- Norwegian terms from `norwegian_terms` frontmatter translated inline at every occurrence (per W-CON-06). Bare-Norwegian-term occurrences flagged.
 - `_INDEX.md` present in every folder; `contains_leaves` and `contains_subfolders` consistent with the folder contents.
 
 ---
