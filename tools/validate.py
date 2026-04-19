@@ -525,11 +525,26 @@ def check_path(a: Article) -> list[Finding]:
 _EM_DASH = "\u2014"
 _CODE_BLOCK_RE = re.compile(r"```.*?```", re.DOTALL)
 _INLINE_CODE_RE = re.compile(r"`[^`]+`")
+_HEADING_RE = re.compile(r"^#{1,6}\s.*$", re.MULTILINE)
 
 
 def _strip_code(text: str) -> str:
     text = _CODE_BLOCK_RE.sub("", text)
     text = _INLINE_CODE_RE.sub("", text)
+    return text
+
+
+def _strip_code_and_headings(text: str) -> str:
+    """For rules that should exempt headings (acronym every-use, Norwegian every-use).
+
+    Headings are navigation aids, not narrative prose. The pedagogy rule
+    about repeating expansions is about learning through repetition in
+    body text. Forcing every-use expansion into `## NCS-specific context`
+    headings produces unreadable navigation and conflicts with the
+    canonical section names used by every stub.
+    """
+    text = _strip_code(text)
+    text = _HEADING_RE.sub("", text)
     return text
 
 
@@ -640,9 +655,10 @@ def check_acronyms_every_use(a: Article) -> list[Finding]:
     body = a.body
     if _is_placeholder(body):
         return out
-    stripped = _strip_code(body)
-    sources_split = re.split(r"^##\s+Sources\b", stripped, maxsplit=1, flags=re.MULTILINE)
-    pre = sources_split[0]
+    # Split off ## Sources FIRST, then strip headings. Doing the strip
+    # before the split removes the anchor heading and breaks the split.
+    sources_split = re.split(r"^##\s+Sources\b", body, maxsplit=1, flags=re.MULTILINE)
+    pre = _strip_code_and_headings(sources_split[0])
     bare = 0
     for m in _ACRONYM_RE.finditer(pre):
         acronym = m.group(1)
@@ -668,11 +684,14 @@ def check_norwegian_terms_every_use(a: Article) -> list[Finding]:
     nts = a.frontmatter.get("norwegian_terms") or []
     if not isinstance(nts, list) or not nts:
         return out
-    stripped = _strip_code(body)
-    # Exclude the terminology section and the Sources section
+    # Split off the Norwegian terminology and Sources sections FIRST,
+    # then strip code and headings. Doing the strip before the split
+    # removes the anchor headings and breaks the split.
+    stripped = body
     for header in (r"^##\s+Norwegian terminology\b", r"^##\s+Sources\b"):
         split = re.split(header, stripped, maxsplit=1, flags=re.MULTILINE)
         stripped = split[0]
+    stripped = _strip_code_and_headings(stripped)
     bare = 0
     for entry in nts:
         if not isinstance(entry, dict):
