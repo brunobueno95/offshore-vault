@@ -1,0 +1,77 @@
+# offshore-vault pipeline configuration
+#
+# Consumed by tools/run_pipeline.py. Edit values here to tune the pipeline
+# without touching code. CLI flags override the values in this file.
+
+version: 1
+
+# Model selection per role. Milestone 2 does not yet spawn Claude
+# subprocesses; these values are declarative placeholders that Milestone 3
+# will actually use when wiring the content, review, and overview agents.
+models:
+  content: claude-opus-4-7
+  review: claude-opus-4-7
+  overview: claude-opus-4-7
+  link_repair: claude-opus-4-7
+  topic_vocab: claude-opus-4-7
+
+# Tree-specific settings. Each tree is processed independently.
+trees:
+  drilling:
+    enabled: true
+    batch_size: 25
+    branch_prefix: bot/drilling
+  crane-and-logistics:
+    enabled: true
+    batch_size: 25
+    branch_prefix: bot/crane-and-logistics
+  subsea:
+    enabled: true
+    batch_size: 25
+    branch_prefix: bot/subsea
+  emergency-response:
+    enabled: true
+    batch_size: 25
+    branch_prefix: bot/emergency-response
+
+# Pipeline-level limits and behaviour.
+pipeline:
+  total_budget: 100             # hard cap on articles across all trees per run
+  max_concurrent: 4             # max parallel tree subprocesses (when LLMs wired)
+  max_turns_per_subprocess: 400
+  retry_transient: 2
+  retry_backoff_s: 30
+  auto_merge: true              # call `gh pr merge --squash` after CI green
+  auto_merge_only_draft: true   # skip auto-merge if PR touches non-draft articles
+  scratch_dir: null             # null = use platform default under LOCALAPPDATA/offshore-vault/runs
+  keep_scratch_on_failure: true
+
+# GitHub remote integration.
+github:
+  remote: origin
+  base_branch: main
+  pr_label: bot
+  pr_template_path: .github/pull_request_template.md
+
+# Priority function weights.
+priority:
+  urgent_file: _URGENT_QUEUE.md
+  foundational_bonus: 20
+  ncs_specific_bonus: 15
+  age_bonus_per_day: 1
+  age_bonus_cap: 30
+  tier_urgent_score: 10000
+  tier_pull_forward_base: 1000
+  tier_chapter_sweep_base: 100
+  tier_backfill_base: 10
+
+# Optional agents, off by default.
+optional_agents:
+  link_repair: false
+  topic_vocab: false
+
+# Observability knobs.
+observability:
+  log_level: info
+  terminal_format: text
+  stream_json_dir: tools/state/runs
