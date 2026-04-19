@@ -1,9 +1,9 @@
 ---
 schema_version: "1.0"
-id: "drilling-sonic"
-title: "Sonic"
+id: "drilling-sonic-lwd"
+title: "Sonic (LWD, Logging While Drilling)"
 title_no: null
-slug: "sonic"
+slug: "sonic-lwd"
 type: null
 status: draft
 domain: "drilling"

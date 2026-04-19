@@ -1,9 +1,9 @@
 ---
 schema_version: "1.0"
-id: "drilling-defoamers"
-title: "Defoamers"
+id: "drilling-cement-defoamers"
+title: "Cement Defoamers"
 title_no: null
-slug: "defoamers"
+slug: "cement-defoamers"
 type: null
 status: draft
 domain: "drilling"

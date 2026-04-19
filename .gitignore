@@ -1,0 +1,33 @@
+# Claude Code session state (local to each worktree, never committed)
+.claude/
+
+# Pipeline state and secrets
+tools/.env
+tools/state/runs/
+tools/state/progress.json
+tools/state/usage_log.csv
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo

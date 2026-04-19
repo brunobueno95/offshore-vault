@@ -1,9 +1,9 @@
 ---
 schema_version: "1.0"
-id: "drilling-gamma-ray"
-title: "Gamma Ray"
+id: "drilling-gamma-ray-lwd"
+title: "Gamma Ray (LWD, Logging While Drilling)"
 title_no: null
-slug: "gamma-ray"
+slug: "gamma-ray-lwd"
 type: null
 status: draft
 domain: "drilling"

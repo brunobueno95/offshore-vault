@@ -1,9 +1,9 @@
 ---
 schema_version: "1.0"
-id: "drilling-sonic"
-title: "Sonic"
+id: "drilling-sonic-wireline"
+title: "Sonic (Wireline)"
 title_no: null
-slug: "sonic"
+slug: "sonic-wireline"
 type: null
 status: draft
 domain: "drilling"

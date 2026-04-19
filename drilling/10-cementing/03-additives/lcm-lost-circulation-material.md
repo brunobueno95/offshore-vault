@@ -1,9 +1,9 @@
 ---
 schema_version: "1.0"
-id: "drilling-lost-circulation"
-title: "Lost Circulation"
+id: "drilling-lcm-lost-circulation-material"
+title: "LCM (Lost Circulation Material)"
 title_no: null
-slug: "lost-circulation"
+slug: "lcm-lost-circulation-material"
 type: null
 status: draft
 domain: "drilling"
