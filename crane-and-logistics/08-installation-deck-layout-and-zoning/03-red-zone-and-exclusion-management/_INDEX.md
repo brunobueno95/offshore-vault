@@ -1,0 +1,11 @@
+---
+schema_version: "1.0"
+title: "03 Red Zone and Exclusion Management"
+slug: "03-red-zone-and-exclusion-management"
+folder_scope: ""
+contains_leaves: true
+contains_subfolders: false
+parent_folder: "08-installation-deck-layout-and-zoning"
+---
+
+<!-- FOLDER INDEX. Agent populates folder_scope and overview content later. -->
