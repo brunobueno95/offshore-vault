@@ -1,0 +1,53 @@
+# CODEOWNERS for offshore-vault
+#
+# Paths listed below require @brunobueno95 review before a PR can merge.
+# The agent pipeline's auto-merge is intentionally blocked on any PR that
+# touches these paths, because an autonomous agent should never change the
+# rules, the schema, the validator, the tooling, or the CI configuration.
+#
+# Article content files under drilling/, crane-and-logistics/, subsea/, and
+# emergency-response/ are NOT listed here. Those are the paths bot PRs are
+# allowed to touch and auto-merge when CI is green.
+#
+# Validator-written files (_UNRESOLVED_LINKS.md, _VALIDATION_REPORT.md,
+# _TODO_QUEUE.md, _MANIFEST.txt, _PIPELINE_REPORT.md) are also NOT listed,
+# because the pipeline writes them every run.
+
+# =============================================================================
+# Vault root governance files (immutable without human review)
+# =============================================================================
+
+/CLAUDE.md                     @brunobueno95
+/_SCHEMA.md                    @brunobueno95
+/_SCHEMA_VERSION.md            @brunobueno95
+/_CONTROLLED_VOCABULARY.md     @brunobueno95
+/_PATH_CONVENTIONS.md          @brunobueno95
+/_AGENT_RULES.md               @brunobueno95
+/_VALIDATION.md                @brunobueno95
+
+# =============================================================================
+# Per-tree self-contained rule files
+# =============================================================================
+
+/drilling/CLAUDE.md                               @brunobueno95
+/drilling/_TOPICS.md                              @brunobueno95
+/drilling/_VERIFICATION_FINDINGS.md               @brunobueno95
+
+/crane-and-logistics/CLAUDE.md                    @brunobueno95
+/crane-and-logistics/_TOPICS.md                   @brunobueno95
+/crane-and-logistics/_VERIFICATION_FINDINGS.md    @brunobueno95
+
+/subsea/CLAUDE.md                                 @brunobueno95
+/subsea/_TOPICS.md                                @brunobueno95
+/subsea/_VERIFICATION_FINDINGS.md                 @brunobueno95
+
+/emergency-response/CLAUDE.md                     @brunobueno95
+/emergency-response/_TOPICS.md                    @brunobueno95
+/emergency-response/_VERIFICATION_FINDINGS.md     @brunobueno95
+
+# =============================================================================
+# Tooling (validator, orchestrator, agent prompts, CI)
+# =============================================================================
+
+/tools/                        @brunobueno95
+/.github/                      @brunobueno95
