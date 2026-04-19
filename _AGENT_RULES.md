@@ -78,15 +78,16 @@ Not a free-form section. The `authoritative_sources` frontmatter is the canonica
 
 ### Voice
 
-- Direct and factual. No marketing language. No hype.
+- 
+- Direct and factual, teaching tone, make complex things easy to understand. No marketing language. No hype.
 - Present tense for descriptions of how things work or are done.
 - Past tense only for historical incidents and deprecated practice.
 - Active voice preferred. Passive where the actor is genuinely unclear or irrelevant ("the BOP was activated" is fine; "the driller activated the BOP" is better when the actor matters).
 
 ### Terminology
 
-- **Acronym expansion on first use.** Always. `BOP (Blowout Preventer)`, `ROP (Rate of Penetration)`, `NCS (Norwegian Continental Shelf)`. After the first use in an article, the acronym alone is fine. This rule applies every article; the reader may arrive at any article cold.
-- **Norwegian term pairing.** When a Norwegian working term exists and matters, give both on first use: `løfteleder (lift supervisor)`.
+- **Acronym expansion on EVERY use.** Always. `BOP (Blowout Preventer)`, `ROP (Rate of Penetration)`, `NCS (Norwegian Continental Shelf)`.  This rule applies every article; and its very important to always expand the Accornym so the user memorize those names through repetition.
+- **Norwegian term pairing.** When a Norwegian working term exists and matters, give both: `løfteleder (lift supervisor)`.
 - **Units.** SI where the NCS convention is SI. Imperial where the NCS convention is imperial (oilfield tradition retains some imperial units: wellbore diameters in inches, pump pressure sometimes in psi). Always state the unit. Never mix without noting conversion.
 
 ### Formatting rules
@@ -195,6 +196,7 @@ The following are categorical rule violations and cause validator rejection rega
 8. **Do not fabricate sources.** Cite real sources or flag the article as incomplete.
 9. **Do not reproduce copyrighted standards text.** Summarize and cite.
 10. **Do not skip the NCS-specific context section** when `ncs_specific: true`. If there is genuinely no NCS angle, the article probably does not belong in this vault.
+11 - **Never give a technical accronym withou expanding the full name, always expand the accronym in every instance
 
 ---
 

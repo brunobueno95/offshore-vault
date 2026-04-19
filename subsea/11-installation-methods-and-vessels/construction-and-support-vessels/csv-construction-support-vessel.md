@@ -1,0 +1,43 @@
+---
+schema_version: "1.0"
+
+id: "subsea-csv-construction-support-vessel"
+title: "Csv Construction Support Vessel"
+title_no: null
+slug: "csv-construction-support-vessel"
+type: null
+status: draft
+
+domain: "subsea"
+folder: "11-installation-methods-and-vessels/construction-and-support-vessels"
+parents: []
+siblings: []
+
+topics: []
+life_cycle_phases: []
+depth: null
+perspective: []
+
+authoritative_sources: []
+reference_textbooks: []
+related_incidents: []
+
+related: []
+cross_domain: []
+
+relevant_to_roles: []
+
+ncs_specific: true
+norwegian_terms: []
+
+authors: []
+created: "2026-04-19"
+updated: "2026-04-19"
+review_due: null
+tags: []
+
+citation_density: null
+word_count: null
+---
+
+<!-- CONTENT PLACEHOLDER. Agent fills per _AGENT_RULES.md. -->

@@ -1,0 +1,43 @@
+---
+schema_version: "1.0"
+
+id: "emergency-response-time-to-first-visual-contact-target"
+title: "Time To First Visual Contact Target"
+title_no: null
+slug: "time-to-first-visual-contact-target"
+type: null
+status: draft
+
+domain: "emergency-response"
+folder: "10-man-overboard-and-sea-rescue-frc-errv/mob-response-performance-standards"
+parents: []
+siblings: []
+
+topics: []
+life_cycle_phases: []
+depth: null
+perspective: []
+
+authoritative_sources: []
+reference_textbooks: []
+related_incidents: []
+
+related: []
+cross_domain: []
+
+relevant_to_roles: []
+
+ncs_specific: true
+norwegian_terms: []
+
+authors: []
+created: "2026-04-19"
+updated: "2026-04-19"
+review_due: null
+tags: []
+
+citation_density: null
+word_count: null
+---
+
+<!-- CONTENT PLACEHOLDER. Agent fills per _AGENT_RULES.md. -->

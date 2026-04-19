@@ -307,7 +307,7 @@ Optional sections: `## Related concepts`, `## Historical incidents`, `## Equipme
 
 ### Mandatory
 
-1. **Acronym expansion on first use.** `G5 (NCS Offshore Pedestal Crane)`, `CCU (Cargo Carrying Unit)`, `SWL (Safe Working Load)`, `WLL (Working Load Limit)`, `LMI (Load Moment Indicator)`, `AHC (Active Heave Compensation)`, `DROPS (Dropped Object Prevention Scheme)`, `SIMOPS (Simultaneous Operations)`, `LMRA (Last Minute Risk Assessment)`, `SJA (Sikker Jobb Analyse)`.
+1. - **Acronym expansion on EVERY use.** Always. `BOP (Blowout Preventer)`, `ROP (Rate of Penetration)`, `NCS (Norwegian Continental Shelf)`.  This rule applies every article; and its very important to always expand the Accornym so the user memorize those names through repetition.
 2. **Norwegian term pairing on first use.** `kranfører (crane operator)`, `løfteleder (lift supervisor)`, `anhuker (rigger)`, `signalgiver (banksman)`, `sakkyndig kontroll (competent inspection)`, `kranbok (crane logbook)`, `rødsone (red zone under crane)`.
 3. **Rigging angle convention: dual reference mandatory.** Any article discussing sling angles MUST state both the Crosby/international horizontal reference AND the Norwegian arbeidsvinkel (working angle from vertical, summing to 90). Include the mini conversion table in every rigging section:
 
@@ -327,6 +327,8 @@ This is a safety-critical repetition rule. Every rigging section. Every time.
 6. **Cite every substantive claim** from the whitelist in section 5.
 
 7. **Meet `depth` word count and citation density before `status: review`.**
+
+8. **Always expend technical accronyms in every single use.
 
 ### Forbidden
 

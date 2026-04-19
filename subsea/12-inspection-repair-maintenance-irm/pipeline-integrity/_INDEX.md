@@ -1,0 +1,11 @@
+---
+schema_version: "1.0"
+title: "pipeline integrity"
+slug: "pipeline-integrity"
+folder_scope: ""
+contains_leaves: true
+contains_subfolders: false
+parent_folder: "12-inspection-repair-maintenance-irm"
+---
+
+<!-- FOLDER INDEX. Agent populates folder_scope and overview content later. -->
