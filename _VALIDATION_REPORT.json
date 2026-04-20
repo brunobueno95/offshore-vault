@@ -2,8 +2,72 @@
   "summary": {
     "articles": 3330,
     "errors": 0,
-    "warnings": 0,
+    "warnings": 9,
     "info": 0
   },
-  "findings": []
+  "findings": [
+    {
+      "rule_id": "W-CON-04",
+      "severity": "warning",
+      "path": "drilling/07-well-control/05-shut-in-procedures/hard-shut-in.md",
+      "detail": "paragraph exceeds 200 words (208)",
+      "field": null
+    },
+    {
+      "rule_id": "W-CON-03",
+      "severity": "warning",
+      "path": "drilling/07-well-control/05-shut-in-procedures/hard-shut-in.md",
+      "detail": "9 bare acronym occurrence(s) not followed by parenthetical expansion",
+      "field": null
+    },
+    {
+      "rule_id": "W-CON-03",
+      "severity": "warning",
+      "path": "drilling/08-well-control-equipment/01-surface-bop-stack/annular-preventer.md",
+      "detail": "15 bare acronym occurrence(s) not followed by parenthetical expansion",
+      "field": null
+    },
+    {
+      "rule_id": "W-CON-04",
+      "severity": "warning",
+      "path": "drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md",
+      "detail": "paragraph exceeds 200 words (252)",
+      "field": null
+    },
+    {
+      "rule_id": "W-CON-03",
+      "severity": "warning",
+      "path": "drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md",
+      "detail": "43 bare acronym occurrence(s) not followed by parenthetical expansion",
+      "field": null
+    },
+    {
+      "rule_id": "W-CON-06",
+      "severity": "warning",
+      "path": "drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md",
+      "detail": "10 bare Norwegian-term occurrence(s) without inline English translation",
+      "field": null
+    },
+    {
+      "rule_id": "W-CON-03",
+      "severity": "warning",
+      "path": "drilling/16-crew-organization-and-roles/01-drill-floor-crew/driller-borer.md",
+      "detail": "6 bare acronym occurrence(s) not followed by parenthetical expansion",
+      "field": null
+    },
+    {
+      "rule_id": "W-CON-06",
+      "severity": "warning",
+      "path": "drilling/16-crew-organization-and-roles/01-drill-floor-crew/driller-borer.md",
+      "detail": "13 bare Norwegian-term occurrence(s) without inline English translation",
+      "field": null
+    },
+    {
+      "rule_id": "W-REL-01",
+      "severity": "warning",
+      "path": "drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md",
+      "detail": "cross_domain path 'subsea/14-subsea-well-integrity-and-p-and-a/01-well-integrity-philosophy/well-barrier-philosophy.md' does not resolve",
+      "field": null
+    }
+  ]
 }

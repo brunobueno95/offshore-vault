@@ -859,13 +859,28 @@ def build_link_graph(articles: list[Article], vault: Path, index_paths: list[Pat
                     continue
                 t = target.strip().lstrip("/")
                 t_md = t if t.endswith(".md") else t + ".md"
-                if t_md in paths:
+
+                # `related` and `parents` are same-tree by definition, and the
+                # schema example shows them as tree-relative (no tree prefix).
+                # Accept either form: if the first segment is already a known
+                # tree name, treat as vault-relative; otherwise prepend the
+                # source article's tree. `cross_domain` is always vault-relative
+                # because it crosses tree boundaries.
+                first_segment = t_md.split("/", 1)[0]
+                if first_segment in DOMAIN_VALUES:
+                    resolved = t_md
+                elif field_name in ("related", "parents"):
+                    resolved = f"{a.tree}/{t_md}"
+                else:
+                    resolved = t_md
+
+                if resolved in paths:
                     out.append(LinkEdge(
                         source=a.rel_path, target=target,
                         field_name=field_name, resolution="RESOLVED",
                     ))
                     continue
-                candidate = _fuzzy_find(t_md, paths)
+                candidate = _fuzzy_find(resolved, paths)
                 if candidate:
                     out.append(LinkEdge(
                         source=a.rel_path, target=target,

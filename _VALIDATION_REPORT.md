@@ -6,6 +6,25 @@
 
 - Articles scanned: 3330
 - Errors: 0
-- Warnings: 0
+- Warnings: 9
 - Info: 0
+
+## Warnings
+
+### W-CON-03 (4)
+- `drilling/07-well-control/05-shut-in-procedures/hard-shut-in.md`: 9 bare acronym occurrence(s) not followed by parenthetical expansion
+- `drilling/08-well-control-equipment/01-surface-bop-stack/annular-preventer.md`: 15 bare acronym occurrence(s) not followed by parenthetical expansion
+- `drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md`: 43 bare acronym occurrence(s) not followed by parenthetical expansion
+- `drilling/16-crew-organization-and-roles/01-drill-floor-crew/driller-borer.md`: 6 bare acronym occurrence(s) not followed by parenthetical expansion
+
+### W-CON-04 (2)
+- `drilling/07-well-control/05-shut-in-procedures/hard-shut-in.md`: paragraph exceeds 200 words (208)
+- `drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md`: paragraph exceeds 200 words (252)
+
+### W-CON-06 (2)
+- `drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md`: 10 bare Norwegian-term occurrence(s) without inline English translation
+- `drilling/16-crew-organization-and-roles/01-drill-floor-crew/driller-borer.md`: 13 bare Norwegian-term occurrence(s) without inline English translation
+
+### W-REL-01 (1)
+- `drilling/15-hse-and-regulatory-framework/02-norsok-standards/norsok-d-010-well-integrity.md`: cross_domain path 'subsea/14-subsea-well-integrity-and-p-and-a/01-well-integrity-philosophy/well-barrier-philosophy.md' does not resolve
 

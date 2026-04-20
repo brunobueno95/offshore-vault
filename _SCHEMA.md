@@ -173,7 +173,9 @@ Slugs of incident articles. Typically reference case studies such as `piper-alph
 
 ### `related` (list of strings)
 
-Vault-relative paths to other articles within the same tree. Used for lateral concept-to-concept links. Example: a `drillers-method-two-circulation.md` article might have `related: ["07-well-control/07-kill-methods/wait-and-weight-engineers-method.md"]`.
+Tree-relative paths to other articles within the same tree. Used for lateral concept-to-concept links. Example: a `drillers-method-two-circulation.md` article might have `related: ["07-well-control/07-kill-methods/wait-and-weight-engineers-method.md"]`.
+
+Vault-relative paths (starting with the tree name, e.g. `drilling/07-well-control/...`) are also accepted, but tree-relative is the preferred convention because `related` is always same-tree and the tree prefix is redundant.
 
 ### `cross_domain` (list of strings)
 
