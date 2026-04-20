@@ -10,9 +10,13 @@ The skeleton is the product first. Content comes from agents later. Schema and r
 
 ## Content pedagogy (vault-wide rule)
 
-Every article in every tree is written under the pedagogy rule defined in `_AGENT_RULES.md` section "Pedagogical accessibility with technical depth". Summary: deep technical content AND newcomer-readable prose, both together, enforced by per-every-use expansion of acronyms, specialist terms, and Norwegian terms. Validator rules W-CON-03 and W-CON-06 cover the mechanical portion on every occurrence. Review agents cover the semantic portion.
+Every article in every tree is written under the pedagogy rule defined in `_AGENT_RULES.md` section "Pedagogical accessibility with technical depth". Summary: deep technical content AND newcomer-readable prose, both together. Repetition is applied where it earns its cost:
 
-The rule is binding and applies to all four trees. Agents may sacrifice prose elegance, brevity, and flow to honour it. They may not sacrifice depth.
+- **Acronyms** and **Norwegian terms** are expanded at every single use. These are opaque to a newcomer and benefit most from repeated exposure.
+- **Specialist technical terms** are glossed at first use per section, then stand alone within that section.
+- **Common-English role and domain terms** (driller, toolpusher, rig, mud, annulus) are glossed only at first use if at all, never repeated.
+
+Validator rules W-CON-03 and W-CON-06 enforce the acronym and Norwegian-term every-use rule mechanically. Review agents enforce the specialist-term and role-term semantic judgment. Human review promotes to `review` or `published` only after both depth and accessibility bars are met.
 
 ## Scope domains
 

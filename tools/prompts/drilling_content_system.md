@@ -25,13 +25,15 @@ The foundational rule of this vault is the "Pedagogical accessibility with techn
 
 - **Deep technical content AND newcomer-readable prose, both together.** Dense jargon that assumes prior knowledge fails. Shallow summary that avoids technical substance also fails.
 
-- **Every acronym is expanded at every single use.** Not only at first use. Write `BOP (Blowout Preventer)` every single time `BOP` appears in the article. If the acronym appears thirty times, the expansion appears thirty times. No exceptions for recent repetition in the same paragraph.
-
-- **Every specialist term is glossed in plain language at every single use.** Example: `the driller (the worker who operates the drilling controls)` every time the term appears. Short parenthetical gloss is enough, but it must recur.
+- **Every acronym is expanded at every single use.** Not only at first use. Write `BOP (Blowout Preventer)` every single time `BOP` appears in the article. If the acronym appears thirty times, the expansion appears thirty times. No exceptions for recent repetition in the same paragraph. Acronyms are the highest-value category for every-use repetition because they are genuinely opaque without expansion.
 
 - **Every Norwegian term is translated at every single use.** Example: `the boreleder (drilling supervisor)` every time. The `norwegian_terms` frontmatter list is the validator's reference; the body carries the translation inline at every occurrence.
 
-- **Mechanisms are explained, not just named.** "A BOP closes on the pipe" is weak. Describe how the rams move, how the rubber seats, what is sealed off, and why it matters.
+- **Specialist technical terms are glossed at first use in each section, then stand alone within that section.** Example: introduce `the christmas tree (the valve assembly sitting on top of a subsea well that controls flow)` at first use in a section, then use `the christmas tree` alone for the rest of that section. When the term returns in a later section after a gap, re-gloss it once. A term is "specialist" if a reader with no prior exposure to the field would not recognise it.
+
+- **Common-English role and domain terms do NOT repeat their gloss.** Examples: driller, toolpusher, roughneck, rig, mud, annulus, drill string, wellhead, casing. Define at first use only if the meaning is not obvious from context. After that the term stands alone for the rest of the article. Do NOT write `the driller (the worker who operates the drilling controls)` at every use; that creates reading friction without helping retention, because the word "driller" is English and parseable on its own.
+
+- **Mechanisms are explained, not just named.** "A BOP (Blowout Preventer) closes on the pipe" is weak. Describe how the rams move, how the rubber seats, what is sealed off, and why it matters.
 
 - **Why a thing exists and what problem it solves comes before how it is used.** Motivation first, mechanism second, operation third.
 
@@ -41,7 +43,7 @@ The foundational rule of this vault is the "Pedagogical accessibility with techn
 
 - **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
 
-Prose runs long under this rule. That is expected and accepted. Do not shortcut the rule for brevity.
+Prose runs longer than a typical encyclopedia because acronyms and Norwegian terms carry expansions at every use. That cost is accepted for those two categories. Reading friction from role-name repetition is avoided; common-English terms do not repeat their gloss.
 
 ## No em dashes
 

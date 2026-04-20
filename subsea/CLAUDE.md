@@ -233,20 +233,21 @@ Every leaf follows this body layout below the frontmatter. Sections may be empty
 
 Every article is written for a reader who needs to become technically competent but is a beginner in the field. The article must be deeply technical AND easy to understand. Both together. Dense jargon that assumes prior domain knowledge fails the rule. Shallow summary that avoids the technical substance also fails the rule. Never assume prior knowledge. Always be pedagogical.
 
-The foundation is repetition. Human memory decays. A reader who sees a term defined once, on page one, will not remember the definition on page three. The article keeps the definitions in front of the reader at all times, so the reader learns through repeated exposure rather than through effort. This is binding, not a style preference.
+The foundation is targeted repetition. Human memory decays most for terms that are genuinely opaque to a newcomer, where repeated exposure is the fastest way to retain them. For terms that are self-evident from English or that carry their meaning from context once introduced, repeated glossing adds noise without helping retention. Apply repetition where it earns its cost.
 
 Concrete:
 
-- **Every acronym is expanded at every single use**, not only at first use. If `ROV` appears thirty times, `ROV (Remotely Operated Vehicle)` appears thirty times. No exception for recent repetition in the same paragraph.
-- **Every specialist term is redefined in plain language at every single use.** A single-clause gloss in parentheses. Example: `the christmas tree (the valve assembly sitting on top of a subsea well that controls flow)` every time the term appears.
-- **Every Norwegian term is translated at every single use.** Example: `the undervannsfartøy (ROV, Remotely Operated Vehicle)` every time, not only first appearance.
+- **Every acronym is expanded at every single use**, not only at first use. If `ROV` appears thirty times, `ROV (Remotely Operated Vehicle)` appears thirty times. Acronyms are genuinely opaque without expansion and are the highest-value category for every-use repetition. No exceptions.
+- **Every Norwegian term is translated at every single use.** Example: `the undervannsfartøy (ROV, Remotely Operated Vehicle)` every time. Norwegian terms are opaque to an English-language reader and must carry their English gloss everywhere they appear.
+- **Specialist technical terms are glossed at first use in each section**, then may stand alone within that section. When a specialist term returns in a later section after a gap, re-gloss. A term is "specialist" if a reader with no prior exposure to the field would not recognise it.
+- **Common-English role and domain terms do NOT repeat their gloss.** Examples: pilot, supervisor, vessel, tether, umbilical, flowline, riser, jumper. Define at first use only if the meaning is not obvious from context; after that the term stands alone for the rest of the article.
 - **Mechanisms are explained, not just named.** Describe how the thing works, not just what it is called.
 - **Why a thing exists and what problem it solves comes before how it is used.**
 - **Examples are NCS-concrete** when possible: specific fields, specific operators, specific equipment models and standards.
 - **Analogies are allowed when they genuinely help the reader learn.** Never forced.
 - **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
 
-Prose runs longer under this rule. That cost is accepted. Depth floors absorb the overhead. Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the mechanical portion on every occurrence. The review agent catches specialist-term violations and articles that are dense-and-incomprehensible or simple-but-shallow.
+Prose runs longer than a typical encyclopedia would produce because acronyms and Norwegian terms carry expansions at every use. That cost is accepted for those two categories. Reading friction from role-name repetition is avoided; common-English terms do not repeat their gloss. Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the mechanical portion. The review agent catches specialist-term and common-English-term semantic issues and articles that are dense-and-incomprehensible or simple-but-shallow.
 
 **Mandatory**
 

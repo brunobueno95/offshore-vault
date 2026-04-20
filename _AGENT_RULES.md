@@ -78,35 +78,37 @@ Not a free-form section. The `authoritative_sources` frontmatter is the canonica
 
 This is the foundation rule. Every article is written for a reader who needs to become technically competent but is a beginner in the field. The article must be deeply technical AND easy to understand. Both together. Dense jargon that assumes prior domain knowledge fails the rule. Shallow summary that avoids the technical substance also fails the rule. Never assume prior knowledge. Always be pedagogical.
 
-The foundation of this rule is repetition. Human memory decays. A reader who sees a term defined once, on page one, will not remember the definition on page three. The article keeps the definitions in front of the reader at all times, so the reader learns through repeated exposure rather than through effort. This is binding, not a style preference. Agents may sacrifice prose elegance, brevity, and flow to honour it. They must not sacrifice depth.
+The foundation of this rule is targeted repetition. Human memory decays most for terms that are genuinely opaque to a newcomer, where repeated exposure is the fastest way to retain them. For terms that are self-evident from English or that carry their meaning from context once introduced, repeated glossing adds noise without helping retention. Apply repetition where it earns its cost.
 
 ### Concrete rules
 
-1. **Every acronym is expanded at every single use**, not only at first use. Example: write `BOP (Blowout Preventer)` every time the acronym appears, in every paragraph, in every section. If an article uses BOP thirty times, the expansion appears thirty times. No exceptions. If the acronym appears in three consecutive sentences, it is expanded three times.
+1. **Every acronym is expanded at every single use**, not only at first use. Example: write `BOP (Blowout Preventer)` every time the acronym appears, in every paragraph, in every section. If an article uses BOP thirty times, the expansion appears thirty times. Acronyms are genuinely opaque without expansion and are the highest-value category for every-use repetition. No exceptions.
 
-2. **Every specialist term is redefined in plain language at every single use.** A single-clause gloss in parentheses is sufficient. Example: `the driller (the worker who operates the drilling controls)` every time the term appears. If the term appears in fifteen places, the gloss appears in fifteen places. Specialist terms are domain-specific words that a reader with no prior exposure to the field would not recognise on their own.
+2. **Every Norwegian term is translated at every single use.** Example: `the kranfører (crane operator)` every time, not only first appearance. Norwegian terms are opaque to an English-language reader and must carry their English gloss everywhere they appear. The `norwegian_terms` frontmatter field lists the pairs for the validator. The body carries the translation inline at every occurrence.
 
-3. **Every Norwegian term is translated at every single use.** Example: `the kranfører (crane operator)` every time, not only first appearance. The `norwegian_terms` frontmatter field lists the pairs for the validator. The body carries the translation inline at every use.
+3. **Specialist technical terms are glossed at first use in each section, then may stand alone within that section.** Example: define `lithosphere (the rigid outer shell of the Earth)` at first use, then use `lithosphere` alone within the same section. When the term returns in a later section after a gap, re-gloss. A term is "specialist" if a reader with no prior exposure to the field would not recognise it.
 
-4. **Mechanisms are explained, not just named.** "A BOP closes on the pipe" is weak. The right explanation describes how the rams move, how the rubber seats, what is sealed off, and why it matters.
+4. **Common-English role and domain terms do NOT repeat their gloss.** Examples: driller, toolpusher, roughneck, rig, mud, annulus, drill string, wellhead, casing. Define at first use only if the meaning is not obvious from context. After that the term stands alone for the rest of the article. Repeated glossing on these terms hurts readability without helping retention, because the words are English and parseable.
 
-5. **Why a thing exists and what problem it solves comes before how it is used.**
+5. **Mechanisms are explained, not just named.** "A BOP (Blowout Preventer) closes on the pipe" is weak. The right explanation describes how the rams move, how the rubber seats, what is sealed off, and why it matters.
 
-6. **Examples are NCS-concrete when possible.** Specific fields (Troll, Johan Sverdrup, Ekofisk), specific operators (Equinor, Aker BP, Vår Energi), specific equipment models and standards.
+6. **Why a thing exists and what problem it solves comes before how it is used.**
 
-7. **Analogies are allowed when they genuinely help the reader learn.** Never forced.
+7. **Examples are NCS-concrete when possible.** Specific fields (Troll, Johan Sverdrup, Ekofisk), specific operators (Equinor, Aker BP, Vår Energi), specific equipment models and standards.
 
-8. **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
+8. **Analogies are allowed when they genuinely help the reader learn.** Never forced.
+
+9. **Paragraphs that would stack three or more undefined technical terms in a row must be broken up or rewritten.**
 
 ### Cost of this rule
 
-Prose runs longer under these rules. That cost is accepted. Depth floors (800 words foundational, 1500 operational, 3000 advanced) absorb the overhead. Articles routinely exceed the floor. That is expected.
+Prose runs longer than a typical encyclopedia would produce because acronyms and Norwegian terms carry expansions at every use. That cost is accepted for those two categories because they are the highest value for repetition. Reading friction from role-name repetition is avoided; common-English terms do not repeat their gloss.
 
 ### Enforcement
 
-Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the mechanical portion on every occurrence. Specialist-term repetition is enforced by the review agent, which flags articles using specialist terms bare.
+Validator rules W-CON-03 (acronyms) and W-CON-06 (Norwegian terms) enforce the every-use mechanical portion. Specialist-term first-use-per-section handling and common-English role-term handling are the review agent's semantic responsibility.
 
-The review agent additionally flags articles that are dense-and-incomprehensible or simple-but-shallow. Human review promotes to `review` or `published` only after both bars (depth AND accessibility) are met.
+The review agent additionally flags articles that are dense-and-incomprehensible or simple-but-shallow, articles where a specialist term is used bare without any prior definition, or articles where a common-English term is re-glossed unnecessarily. Human review promotes to `review` or `published` only after both bars (depth AND accessibility) are met.
 
 ---
 
