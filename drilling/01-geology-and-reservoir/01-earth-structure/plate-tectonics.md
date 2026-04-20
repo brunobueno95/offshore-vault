@@ -42,20 +42,20 @@ norwegian_terms:
   - { "no": "sokkelen", en: "the shelf" }
   - { "no": "forkastning", en: "fault" }
   - { "no": "gravsenkning", en: "graben, rift valley" }
-authors: ["agent:drilling-content-v1"]
+authors: ["agent:drilling-content-v1", "agent:drilling-review-v1"]
 created: "2026-04-19"
-updated: "2026-04-19"
+updated: "2026-04-20"
 review_due: "2027-04-19"
 tags: ["geology", "plate-tectonics", "earth-structure", "basin-formation", "ncs"]
-citation_density: 0.57
-word_count: 2276
+citation_density: 0.58
+word_count: 2256
 ---
 
 ## Overview
 
 Plate tectonics is the scientific framework that explains how the outer shell of the Earth is broken into large rigid pieces, called plates, that move slowly across the planet's surface. Plate motion reshapes continents over millions of years, builds mountain belts, opens oceans, and pulls continental crust (the solid rocky outermost layer of the Earth) apart into deep basins. For a driller (the worker who operates the drilling controls) on the NCS (Norwegian Continental Shelf), plate tectonics is the root cause of everything that makes the North Sea and the Norwegian Sea worth drilling in the first place. The basins that contain oil and gas on the NCS (Norwegian Continental Shelf) were formed by plate-tectonic stretching of continental crust (the solid outer rocky layer of the Earth), not by chance (sokkeldirektoratet-factpages, Geology overview).
 
-Understanding plate tectonics gives a driller (the worker who operates the drilling controls) a mental picture of why formations appear in the order they do, why pressure regimes change with depth, and why structures such as the Viking Graben (a deep, fault-bounded trough in the northern North Sea) hold the hydrocarbons (oil and gas, the target of drilling) they hold. This article is written for a reader with no prior geology background. It introduces plates, their boundaries, and the forces that move them, then connects those concepts to the geological history of the NCS (Norwegian Continental Shelf) so that the reader can reason from plate tectonics to why a specific NCS (Norwegian Continental Shelf) well is drilled in a particular place to a particular depth.
+Understanding plate tectonics gives a driller a mental picture of why formations appear in the order they do, why pressure regimes change with depth, and why structures such as the Viking Graben (a deep, fault-bounded trough in the northern North Sea) hold the hydrocarbons (oil and gas, the target of drilling) they hold. This article is written for a reader with no prior geology background. It introduces plates, their boundaries, and the forces that move them, then connects those concepts to the geological history of the NCS (Norwegian Continental Shelf) so that the reader can reason from plate tectonics to why a specific NCS (Norwegian Continental Shelf) well is drilled in a particular place to a particular depth.
 
 ## Details
 
@@ -113,11 +113,11 @@ The NCS (Norwegian Continental Shelf) today is a passive margin (a continental e
 
 6. Pleistocene (the geological epoch from about 2.6 million years ago to 11,700 years ago) glacial erosion and isostatic rebound (the slow upward rise of crust after an ice load is removed). Repeated ice sheets carved the Norwegian Trench, loaded the crust, and then unloaded it. Isostatic rebound (the ongoing rise of the crust after ice retreat) continues today.
 
-For a driller (the worker who operates the drilling controls) on the NCS (Norwegian Continental Shelf), the operational consequences of this plate-tectonic history are concrete:
+For a driller on the NCS (Norwegian Continental Shelf), the operational consequences of this plate-tectonic history are concrete:
 
 - Basin architecture determines casing design. A well drilled into the Central Graben passes through post-rift sag deposits, mobile Zechstein Salt (the Permian salt unit that flows under load), and rift-fill sediments of sharply changing pressure. Each of these has its own implications for mud weight and casing setting depth (sokkeldirektoratet-factpages, Geology overview).
 - Rift-era faults create structural traps and also create shallow-gas hazards. The same faults that trap hydrocarbons (oil and gas) can also transmit shallow gas toward the surface, which is why shallow-gas planning is a standard part of NCS (Norwegian Continental Shelf) well design (sokkeldirektoratet-factpages, Geology overview).
-- Paleocene (about 66 to 56 million years ago) sand bodies buried by later Cenozoic (the last 66 million years) shales are often overpressured. The driller (the worker operating the drilling controls) and the boreleder (drilling supervisor) need to plan mud weight for pore-pressure ramps in those intervals.
+- Paleocene (about 66 to 56 million years ago) sand bodies buried by later Cenozoic (the last 66 million years) shales are often overpressured. The driller and the boreleder (drilling supervisor) need to plan mud weight for pore-pressure ramps in those intervals.
 - The Caledonian basement (the old mountain-root rocks from the 440 to 400 million-year-old collision) forms the deep floor of several NCS (Norwegian Continental Shelf) basins and defines the lower limit of drillable prospect space for most plays (sokkeldirektoratet-factpages, Geology overview).
 
 Plate-tectonic understanding is the precondition for all NCS (Norwegian Continental Shelf) well planning. It is also the reason why seismic datasets, well logs, and the resource databases maintained by Sokkeldirektoratet (the Norwegian Offshore Directorate) are organised around basin and play boundaries that ultimately trace back to plate-tectonic events (sokkeldirektoratet-factpages, Fields and discoveries).
