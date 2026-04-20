@@ -526,6 +526,8 @@ _EM_DASH = "\u2014"
 _CODE_BLOCK_RE = re.compile(r"```.*?```", re.DOTALL)
 _INLINE_CODE_RE = re.compile(r"`[^`]+`")
 _HEADING_RE = re.compile(r"^#{1,6}\s.*$", re.MULTILINE)
+_HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
+_TABLE_ROW_RE = re.compile(r"^\s*\|.*$", re.MULTILINE)
 
 
 def _strip_code(text: str) -> str:
@@ -535,16 +537,25 @@ def _strip_code(text: str) -> str:
 
 
 def _strip_code_and_headings(text: str) -> str:
-    """For rules that should exempt headings (acronym every-use, Norwegian every-use).
+    """For rules that should exempt headings, tables, and HTML comments.
 
-    Headings are navigation aids, not narrative prose. The pedagogy rule
-    about repeating expansions is about learning through repetition in
-    body text. Forcing every-use expansion into `## NCS-specific context`
-    headings produces unreadable navigation and conflicts with the
-    canonical section names used by every stub.
+    The pedagogy rule on every-use expansion targets narrative prose
+    where repetition helps the reader retain terms. Scope carve-outs:
+
+    - Headings: navigation aids, canonical section names baked into every
+      stub (`## NCS-specific context`). Forcing expansion there breaks
+      navigation.
+    - Tables: compact reference structures. A table cell saying `API 16A`
+      in a list of standards is reader-legible in context and does not
+      benefit from expansion in every cell.
+    - HTML comments: agent-injected metadata (TODO markers, review flags),
+      not reader-visible prose.
+    - Code blocks and inline code: technical, already exempt.
     """
     text = _strip_code(text)
     text = _HEADING_RE.sub("", text)
+    text = _HTML_COMMENT_RE.sub("", text)
+    text = _TABLE_ROW_RE.sub("", text)
     return text
 
 

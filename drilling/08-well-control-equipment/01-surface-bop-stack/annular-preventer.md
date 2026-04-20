@@ -77,18 +77,18 @@ norwegian_terms:
   - { "no": "trykktest", en: "pressure test" }
   - { "no": "funksjonstest", en: "function test" }
   - { "no": "brønnbarriere", en: "well barrier" }
-authors: ["agent:drilling-content-v1"]
+authors: ["agent:drilling-content-v1", "agent:drilling-review-v1"]
 created: "2026-04-19"
 updated: "2026-04-20"
 review_due: "2027-10-19"
 tags: ["bop", "well-control-equipment", "annular-preventer", "surface-bop", "packing-element", "ncs"]
-citation_density: 0.81
-word_count: 2975
+citation_density: 0.80
+word_count: 2994
 ---
 
 ## Overview
 
-An annular preventer is a type of BOP (Blowout Preventer) that uses a single ring-shaped rubber packing element to seal the wellbore around almost any object that happens to be in the hole. It can close on drill pipe, on drill collars, on a tool joint, on the kelly, on a wireline, and even on open hole with nothing in the bore. That versatility is what separates the annular preventer from ram preventers, which are the other main type of BOP (Blowout Preventer) and which use opposing steel rams dressed for one specific pipe diameter at a time. On a surface BOP (Blowout Preventer) stack, which is the type of BOP (Blowout Preventer) assembly mounted above the rig floor on a fixed platform, a jack-up, or a land rig, the annular preventer is the element that sits at the very top and is the first element closed when the crew needs to shut in the well (api-std-53, Section 6).
+An annular preventer is a type of BOP (Blowout Preventer) that uses a single ring-shaped rubber packing element to seal the wellbore around almost any object that happens to be in the hole. It can close on drill pipe, on drill collars, on a tool joint, on the kelly, on a wireline, and even on open hole with nothing in the bore. <!-- REVIEW-FLAG: specialist term "tool joint" used without first-use gloss --> <!-- REVIEW-FLAG: specialist term "kelly" used without first-use gloss --> That versatility is what separates the annular preventer from ram preventers, which are the other main type of BOP (Blowout Preventer) and which use opposing steel rams dressed for one specific pipe diameter at a time. On a surface BOP (Blowout Preventer) stack, which is the type of BOP (Blowout Preventer) assembly mounted above the rig floor on a fixed platform, a jack-up, or a land rig, the annular preventer is the element that sits at the very top and is the first element closed when the crew needs to shut in the well (api-std-53, Section 6).
 
 The annular preventer exists because a working well has many different things hanging in the hole at different moments. A crew may be running casing, then tripping drill pipe, then stripping (moving pipe in or out of the well while the BOP (Blowout Preventer) is closed and pressure is contained) through tool joints while a kick (an unwanted influx of formation fluid into the wellbore under pressure) is circulated out. Ram preventers seal only on the exact pipe size they are dressed for. The annular preventer uses a rubber packing element that can squeeze down around any shape, and that flexibility makes it the first tool the driller reaches for when flow is detected and the well must be closed in fast. This article explains how the annular preventer seals, how it is used during normal drilling and during a kick, how it is tested, and how the NCS (Norwegian Continental Shelf) regulatory regime under Havtil (Havindustritilsynet, the Norwegian Ocean Industry Authority) governs its condition (norsok-d-010-rev5, Clause 6).
 
@@ -172,7 +172,7 @@ On a surface BOP (Blowout Preventer) stack, the annular preventer sits at the to
 - It closes first. When the crew sees flow and the driller calls "shut in", the annular preventer is the fastest-closing element because its closing pressure is lowest and the element does not need to align with a specific pipe size. Closing the annular preventer first isolates the well while the driller chooses which rams to close below it (api-std-53, Section 6).
 - It is the easiest element to redress. The packing element can be replaced through the top cap without breaking the stack or disturbing the ram preventers below. Putting the annular preventer on top minimises the downtime of an element change.
 
-Some stacks include two annular preventers in series to provide redundancy, especially on high-pressure wells or on wells where long stripping operations are expected. That two-annular configuration is more common on subsea BOP (Blowout Preventer) stacks, where one annular preventer is placed in the LMRP (Lower Marine Riser Package, the upper removable half of a subsea BOP stack) and a second in the main stack. On surface BOP (Blowout Preventer) stacks, a single annular preventer is more common and redundancy is provided by the ram preventers below (api-std-53, Section 6).
+Some stacks include two annular preventers in series to provide redundancy, especially on high-pressure wells or on wells where long stripping operations are expected. That two-annular configuration is more common on subsea BOP (Blowout Preventer) stacks, where one annular preventer is placed in the LMRP (Lower Marine Riser Package, the upper removable half of a subsea BOP (Blowout Preventer) stack) and a second in the main stack. On surface BOP (Blowout Preventer) stacks, a single annular preventer is more common and redundancy is provided by the ram preventers below (api-std-53, Section 6).
 
 ## NCS-specific context
 
